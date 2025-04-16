@@ -38,7 +38,7 @@ namespace Qv2ray::core::handler
     {
         configs[id].overrideDNS = overrideGlobal;
         configs[id].dnsConfig = dns;
-        // configs[id].fakeDNSConfig = fakeDNS;
+        configs[id].fakeDNSConfig = fakeDNS;
         return true;
     }
 
@@ -383,7 +383,7 @@ namespace Qv2ray::core::handler
         if (!hasDNS)
         {
             root.insert("dns", GenerateDNS(dnsConf));
-            root.insert("fakedns", fakeDNSConf.toJson());
+            // root.insert("fakedns", fakeDNSConf.toJson());
             LOG("Added global DNS config");
         }
 
